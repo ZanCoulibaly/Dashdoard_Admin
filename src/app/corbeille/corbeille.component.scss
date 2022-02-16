@@ -1,0 +1,31 @@
+@import "../home/home.component.scss";
+.modifier {
+    color: green;
+    font-size: 2rem;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    // width: 25%;
+    font-size: medium;
+    padding: 5px;
+}
+
+mat-icon {
+    padding: 5px;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background: #fff;
+}

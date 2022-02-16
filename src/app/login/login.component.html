@@ -1,0 +1,29 @@
+<content *ngIf="data != ''">
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form class="sign-in-form" #data="ngForm" (ngSubmit)="loginPass(data)">
+                    <h2 class="title">CONNEXION</h2>
+                    <div class="input-field">
+                        <mat-icon>person</mat-icon>
+                        <input type="email" placeholder="Email" name="login" ngModel />
+                    </div>
+                    <div class="input-field">
+                        <mat-icon>key</mat-icon>
+                        <input type="password" placeholder="Password" ngModel name="password" />
+                    </div>
+                    <input type="submit" value="Login" class="btn solid" />
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <img src="assets/tutorat.png" class="image" alt="" />
+            </div>
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</content>

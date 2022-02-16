@@ -1,0 +1,21 @@
+<mat-nav-list *ngIf="data !=''">
+    <div class="logo py-4">
+        <img src="./assets/tutorat.png" alt="Tutorat Mali" />
+    </div>
+    <mat-divider></mat-divider>
+    <h2 matSubheader class="mt-2">APPLICATION TUTORAT</h2>
+
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/home">
+        <mat-icon color="warning">home</mat-icon> Accueil
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard">
+        <mat-icon color="warning">person</mat-icon> Tuteur
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/ecole">
+        <mat-icon color="warning">school</mat-icon> Ecoles
+    </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/utilisateur">
+        <mat-icon color="warning">people</mat-icon> Parent & Elève </a>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/corbeille">
+        <mat-icon color="warning">delete</mat-icon> Corbeille </a>
+</mat-nav-list>

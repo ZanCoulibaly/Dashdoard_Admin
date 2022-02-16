@@ -1,0 +1,78 @@
+@import "../home/home.component.scss";
+.danger {
+    color: red;
+}
+
+.detail {
+    color: blue;
+}
+
+.modifier {
+    color: green;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
+
+td,
+th {
+    // width: 25%;
+    padding: 5px;
+    font-size: medium;
+}
+
+mat-icon {
+    padding: 5px;
+    justify-content: space-between;
+}
+
+button {
+    border: none;
+    background: #fff;
+}
+
+.headerling {
+    color: blue;
+    display: flex;
+    padding-right: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.det {
+    font-size: 1.1rem;
+    justify-content: start;
+    align-items: center;
+    text-align: start;
+}
+
+.button1 {
+    background-color: green;
+    color: #fff;
+}
+
+.table-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.table-full-width {
+    width: 100%;
+}
+
+td {
+    padding-right: 8px;
+}
+
+.button2 {
+    margin-left: 70%;
+    background: blue;
+    color: #fff;
+}

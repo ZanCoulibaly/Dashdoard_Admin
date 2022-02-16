@@ -1,0 +1,35 @@
+<div class="container-fluid page">
+    <div class="d-flex page__box p-3 mt-2">CORBEILLE</div>
+    <div class="page__content shadow p-3 position-relative">
+        <!-- <div class="page__content-data position-absolute text-center"> -->
+        Les données supprimés
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nom</th>
+                    <th scope="col">Prénom</th>
+                    <th scope="col">Profil</th>
+                    <th scope="col">Etat</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let app of list">
+                    <td>{{app.id }}</td>
+                    <td>{{app.nom }}</td>
+                    <td> {{app.prenom}} </td>
+                    <td> {{app.profile}} </td>
+                    <td> {{app.etat}} </td>
+                    <td>
+
+                        <button>
+                              <mat-icon class="modifier"  (click)="recuperation(app.id)">history</mat-icon>
+                          </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- </div> -->
+    </div>
+</div>
