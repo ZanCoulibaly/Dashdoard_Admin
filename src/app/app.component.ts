@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Tutorat by Zan';
-  sideBarOpen: boolean;
+  sideBarOpen: boolean = true;
   data:any =[];
+  loginStatus : number = 2;
+
+  public constructor(private route: Router){}
 
   ngOnInit(): void {
-      if(localStorage['fail']){
-        this.sideBarOpen= false;
-      }else{
-        this.sideBarOpen= true;
-      }
+    console.log(this.loginStatus)
+    if(localStorage['Status']){
+      this.loginStatus= 1
+      console.log(this.loginStatus)
+    }
 
-      this.data= JSON.parse(localStorage.getItem('loginInfo'))
+    if(localStorage['loginInfo']!=""){
+      this.data = JSON.parse(localStorage.getItem('loginInfo'));
+    }
+      
  }
+
  sideBarToggler() {
   //  window.location.reload();
     this.sideBarOpen = !this.sideBarOpen;

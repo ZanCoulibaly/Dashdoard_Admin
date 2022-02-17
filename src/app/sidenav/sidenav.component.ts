@@ -12,9 +12,8 @@ export class SidenavComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    if(localStorage.getItem('loginInfo')){
-      this.data= JSON.parse(localStorage.getItem('loginInfo'))
-      console.log(this.data)
+    if(localStorage['loginInfo']){
+      this.data = JSON.parse(localStorage.getItem('loginInfo'));
     }
 
   }

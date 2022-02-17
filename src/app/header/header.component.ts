@@ -9,13 +9,16 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   @Output() toggleSidebarForMe: EventEmitter<any> = new EventEmitter();
-  data: any= []
-  constructor(private router: Router, private service: ServicesService) {}
 
-  ngOnInit(): void {
-    this.data= JSON.parse(localStorage.getItem('loginInfo'))
-    console.log(this.data);
+  data: any =[];
+  
+  constructor(private route: Router, private service: ServicesService) {}
 
+  ngOnInit(): void {  
+
+    if(localStorage.getItem('loginInfo')){
+      this.data = JSON.parse(localStorage.getItem('loginInfo'));
+    }
   }
 
   toggleSidebar() {
@@ -24,6 +27,7 @@ export class HeaderComponent implements OnInit {
 
 
   LogOut(){
-    this.service.logout()
+    localStorage.clear();
+    this.route.navigate(['login'])
   }
 }

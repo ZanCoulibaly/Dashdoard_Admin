@@ -88,7 +88,8 @@ export class ServicesService {
   }
 
   logout(){
-    localStorage.removeItem;
+    localStorage.removeItem('loginInfo');
+    localStorage.removeItem('loginStatus');
     this.route.navigate(['login'])
   }
 }

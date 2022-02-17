@@ -1,4 +1,4 @@
-<mat-toolbar *ngIf="data[0].activiter===true">
+<mat-toolbar> 
     <mat-toolbar-row class="justify-content-between">
         <button mat-icon-button (click)="toggleSidebar()">
       <mat-icon>menu</mat-icon>
@@ -9,7 +9,7 @@
                     <button mat-button [matMenuTriggerFor]="menu" class="user mt-2 d-flex align-items-center">
             <img src="./assets/tutorat.png" alt="" class="user-image mr-1 p-2" />
 
-            {{data[0].nom}} {{data[0].prenom}}
+            Mr {{data[0].nom}}
             <mat-icon class="user-image-icon ml-1">keyboard_arrow_down</mat-icon
             >
           </button>

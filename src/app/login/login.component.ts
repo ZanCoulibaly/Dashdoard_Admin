@@ -10,7 +10,6 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   login: any;
   password: any;
-
   data: any
   // Statut: boolean;
   constructor(
@@ -20,7 +19,6 @@ export class LoginComponent implements OnInit {
      ) { }
 
   ngOnInit(): void {
-    this.data= JSON.parse(localStorage.getItem('loginInfo'))
   }
 
   loginPass(data){
@@ -29,7 +27,9 @@ export class LoginComponent implements OnInit {
       if(donne==""){
         return console.error("mot de pass ou numéro incorrect")
       }else{
+        let satatus : number = 1;
         localStorage.setItem('loginInfo', JSON.stringify(donne))
+        localStorage.setItem('Status', JSON.stringify(satatus))
         //this.service.Activiter(donne[0].id)
         this.route.navigate(['home'])
       }
