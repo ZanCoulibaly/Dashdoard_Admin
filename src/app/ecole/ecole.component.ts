@@ -11,6 +11,7 @@ export class EcoleComponent implements OnInit {
   list: any;
   mode= 1;
   donne: any;
+  delta: any;
 
   constructor(
     private router: Router,
@@ -47,11 +48,11 @@ export class EcoleComponent implements OnInit {
          // this.listess();
      })
    }
-   editer(id:any, ecole:String){
-     return this.service.modifierEcole(id, ecole).subscribe(
+   editer(id:any,){
+     return this.service.detailsEcole(id).subscribe(
        data2=>{
-        //  window.location.reload();
-         console.log(data2);
+        this.delta=JSON.parse(data2)
+         console.log(this.delta);
          this.mode= 3;
 
        }

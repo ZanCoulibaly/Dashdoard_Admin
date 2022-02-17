@@ -1,4 +1,4 @@
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 import { ServicesService } from './../api/services.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -28,10 +28,9 @@ export class LoginComponent implements OnInit {
         return console.error("mot de pass ou numéro incorrect")
       }else{
         let satatus : number = 1;
-        localStorage.setItem('loginInfo', JSON.stringify(donne))
-        localStorage.setItem('Status', JSON.stringify(satatus))
-        //this.service.Activiter(donne[0].id)
-        this.route.navigate(['home'])
+        localStorage.setItem('loginInfo', JSON.stringify(donne));
+        localStorage.setItem('Status', JSON.stringify(satatus));
+        this.route.navigate(['home']);
       }
 
     })

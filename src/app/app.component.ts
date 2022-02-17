@@ -22,9 +22,10 @@ export class AppComponent implements OnInit {
     }
 
     if(localStorage['loginInfo']!=""){
+
       this.data = JSON.parse(localStorage.getItem('loginInfo'));
     }
-      
+
  }
 
  sideBarToggler() {
